@@ -1,5 +1,6 @@
-<div align=center><h1>Create ReactJS Vite and Django project</h1>
-  <h3>YouTube Video Link: https://youtu.be/eXrwF4LXF5c</h3>
+<div align=center>
+  <h1>Create ReactJS Vite and Django project</h1>
+  <h3>  YouTube Video https://youtu.be/eXrwF4LXF5c</h3>
 </div>
 
 
