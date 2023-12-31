@@ -48,6 +48,11 @@ INSTALLED_APPS = [
 CORS_ALLOWED_ORIGINS = [
     'http://localhost:5173',  # Adjust as per your frontend URL
 ]
+MIDDLEWARE = [
+    #...
+    'corsheaders.middleware.CorsMiddleware',
+    #...
+]
 ```
 
 ### Create Models
@@ -126,4 +131,45 @@ python3 manage.py makemigrations
 python3 manage.py migrate
 python3 manage.py runserver
 ```
+# create `.env` file in `/frontend/.env`
+```
+VITE_API_URL=http://127.0.0.1:8000/api/
+```
+# write the bellow code
+```js
+import { useState ,useEffect} from 'react'
+import './App.css'
 
+
+
+function App() {
+  const [data,setData] = useState([])
+
+  useEffect(() =>{
+    async function fetchData(){
+      console.log(import.meta.env.VITE_API_URL)
+      try {
+        const response = await fetch(`${import.meta.env.VITE_API_URL}`)
+        if (!response.ok) {
+          throw new Error("Network respons was not ok...")
+        }
+        const result = await response.json();
+        console.log(result);
+        setData(result);
+      } catch (error) {
+        
+      }
+    }
+  })
+  fetchData();
+  return (
+    <>
+      <h1>Hello World!..</h1>
+    </>
+  )
+}
+
+
+export default App
+
+```
