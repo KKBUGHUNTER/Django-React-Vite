@@ -19,10 +19,8 @@ function App() {
       }
     }
 
-    fetchData(); // Call fetchData function inside useEffect
-  }, []); // Add an empty dependency array to ensure useEffect runs only once
-
-  // Render the fetched data
+    fetchData(); 
+  }, []); 
   return (
     <>
       <h1>Hello World!..</h1>
