@@ -12,6 +12,10 @@ cd frontend
 npm install
 npm run dev
 ```
+Optional to move to env
+```bash
+workon env
+```
 ## Create and Activate Virtual Environment
 
 ```bash
