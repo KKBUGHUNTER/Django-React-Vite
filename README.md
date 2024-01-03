@@ -33,9 +33,11 @@ cd backend/
 python3 manage.py migrate
 python3 manage.py runserver
 python3 manage.py createsuperuser
+```
+## Create a App called post
+```bash
 python3 manage.py startapp post
 ```
-
 ### Update Backend Settings
 In `backend/backend/settings.py`:
 ```python
