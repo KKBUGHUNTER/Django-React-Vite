@@ -179,6 +179,14 @@ function App() {
 
 export default App;
 ```
+## Run the Application 
+```bash
+python3 manage.py makemigrations
+python3 manage.py migrate
+npm run dev
+python3 manage.py runserver
+```
+
 ## Open your Browser 
 Access the application using http://localhost:5173/
 Access the application django page using http://127.0.0.1:8000/api/
