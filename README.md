@@ -188,9 +188,9 @@ python3 manage.py runserver
 ```
 
 ## Open your Browser 
-Access the application using http://localhost:5173/
-Access the application django page using http://127.0.0.1:8000/api/
-Access the application django Admin page using http://127.0.0.1:8000/admin/login/?next=/admin/
+Access the application using http://localhost:5173/ <br>
+Access the application django page using http://127.0.0.1:8000/api/ <br>
+Access the application django Admin page using http://127.0.0.1:8000/admin/login/?next=/admin/ <br>
 
 <img src="https://github.com/KKBUGHUNTER/Django-React-Vite/assets/91019132/4ae082a4-8b19-4abe-b760-203f468a5cb7" height=250>
 <img src="https://github.com/KKBUGHUNTER/Django-React-Vite/assets/91019132/72bfc565-45d4-4a22-8151-c0ce1b4fd7af" height=250>
