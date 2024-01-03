@@ -141,42 +141,49 @@ VITE_API_URL=http://127.0.0.1:8000/api/
 ```
 # write the bellow code
 ```js
-import { useState ,useEffect} from 'react'
-import './App.css'
-
-
+import { useState, useEffect } from 'react';
+import './App.css';
 
 function App() {
-  const [data,setData] = useState([])
+  const [data, setData] = useState([]);
 
-  useEffect(() =>{
-    async function fetchData(){
-      console.log(import.meta.env.VITE_API_URL)
+  useEffect(() => {
+    async function fetchData() {
       try {
-        const response = await fetch(`${import.meta.env.VITE_API_URL}`)
+        const response = await fetch(`${import.meta.env.VITE_API_URL}post/`);
         if (!response.ok) {
-          throw new Error("Network respons was not ok...")
+          throw new Error('Network response was not ok...');
         }
         const result = await response.json();
-        console.log(result);
+        console.log(result)
         setData(result);
       } catch (error) {
-        
+        console.error('Error fetching data:', error);
       }
     }
-  })
-  fetchData();
+
+    fetchData(); 
+  }, []); 
   return (
     <>
       <h1>Hello World!..</h1>
+      {data.map((post) => (
+        <div key={post.id}>
+          <h2>{post.title}</h2>
+          <p>{post.body}</p>
+        </div>
+      ))}
     </>
-  )
+  );
 }
 
-
-export default App
-
+export default App;
 ```
+## Open your Browser 
+Access the application using http://localhost:5173/
+Access the application django page using http://127.0.0.1:8000/api/
+Access the application django Admin page using http://127.0.0.1:8000/admin/login/?next=/admin/
+
 <img src="https://github.com/KKBUGHUNTER/Django-React-Vite/assets/91019132/4ae082a4-8b19-4abe-b760-203f468a5cb7" height=250>
 <img src="https://github.com/KKBUGHUNTER/Django-React-Vite/assets/91019132/72bfc565-45d4-4a22-8151-c0ce1b4fd7af" height=250>
 <img src="https://github.com/KKBUGHUNTER/Django-React-Vite/assets/91019132/30a69f11-ed3b-48fa-871f-314ec845035d" height=250>
