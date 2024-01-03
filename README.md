@@ -14,7 +14,6 @@ npm run dev
 ```
 
 ## Create and Activate Virtual Environment
-
 ```bash
 virtualenv env
 cd env
@@ -22,22 +21,26 @@ source bin/activate
 pip install django djangorestframework django-cors-headers serializer
 cd ..
 ```
+
 ## Create Django project
 backend  - name of the project
 ```bash
 django-admin startproject backend
 cd backend/
 ```
+
 ## Run the Development Server
 ```bash
 python3 manage.py migrate
 python3 manage.py runserver
 python3 manage.py createsuperuser
 ```
+
 ## Create a App called post
 ```bash
 python3 manage.py startapp post
 ```
+
 ### Update Backend Settings
 In `backend/backend/settings.py`:
 ```python
