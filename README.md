@@ -20,6 +20,7 @@ virtualenv env
 cd env
 source bin/activate
 pip install django djangorestframework django-cors-headers serializer
+cd ..
 ```
 ## Create Django project
 backend  - name of the project
